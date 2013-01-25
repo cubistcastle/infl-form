@@ -1,0 +1,142 @@
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// ## Reuseable Columbia Styles  
+//  * Can be imported to any project for access to standard Columbia styles (e.g. Fonts, Colors)
+//  * Using "CCC-" for namespace on colors to avoid conlicts wth project specific variables.
+
+// ## Contents
+//     1. Colors — Official colors for Columbia College Chicago defined with rgba
+//     2. Fonts — Franklin Demi and Book web font mixins
+//     3. Wordmark — silent SVG and fallback classes for wordmark
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+//------------------------------------
+// 1. Colors
+//------------------------------------
+$CCC-orange: rgba(245, 123, 32, 1.0000);
+$CCC-red:    rgba(238, 46, 36, 1.0000);
+$CCC-pink:   rgba(236, 0, 140, 1.0000);
+$CCC-blue:   rgba(0, 164, 228, 1.0000);
+$CCC-teal:   rgba(114, 202, 200, 1.0000);
+$CCC-purple: rgba(123, 43, 131, 1.0000);
+$CCC-green:  rgba(97, 178, 78, 1.0000);
+$CCC-yellow: rgba(255, 207, 1, 1.0000);
+
+$new-grey: rgba(232, 232, 234, 1.0000);
+
+//------------------------------------
+// 2. Fonts
+//------------------------------------
+
+// 2.1  @font-face
+@import "compass/css3/font-face";
+
+// given that files should be in stylesheets/fonts/, provide the remaining file names and paths (if applicable)
+$frank-demi-path: "itcfranklingothicstd-demi-webfont" !default;
+$frank-book-path: "itcfranklingothicstd-book-webfont" !default;
+
+@mixin franklin-font {
+    @include font-face(
+        'FranklinDemi',
+        font-files(
+            "#{$frank-demi-path}.woff", woff,
+            "#{$frank-demi-path}.ttf", truetype,
+            "#{$frank-demi-path}.svg#itcfranklingothicstd", svg),
+        '#{$frank-demi-path}.eot',
+        normal,
+        normal); 
+    @include font-face(
+        'FranklinBook',
+        font-files(
+            "#{$frank-book-path}.woff", woff,
+            "#{$frank-book-path}.ttf", truetype,
+            "#{$frank-book-path}.svg#itcfranklingothicstd", svg),
+        '#{$frank-book-path}.eot',
+        normal,
+        normal); 
+}
+// if we want franklin, we'll need to call it.
+// @include franklin-font;
+
+// Lato font mixin. Pulls in 700, 400, 400 ital, and 300.
+@mixin lato-font {
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+    }
+    @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Lato Italic'), local('Lato-Italic'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+    }
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 300;
+      src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+    }
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+    }
+}
+// load it with an include statement
+@include lato-font;
+
+
+
+// 2.2 Font Stack Variables to drop in elsewhere.
+$FrankDemiFontStack: "FranklinDemi", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$FrankBookFontStack: "FranklinBook", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$LatoFontStack: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+
+//------------------------------------
+// 3. Wordmark
+//------------------------------------
+// First choice is an SVG file, fallback is a png. Note that fallback will depend on Modernizr and should be implemented like:
+//    .svg .footer-links {
+//      @extend %svg-wordmark;
+//     }
+//   
+//    .no-svg .footer-links {
+//      @extend %no-svg-wordmark;
+// }
+
+// define wordmark locations
+$svg-wordmark-location: "../images/wordmark.svg";
+$no-svg-wordmark-location: "../images/ColumbiaWordmark-White.png";
+
+// create silent classes which can be called with @extend.
+%svg-wordmark {
+    background-image: url(#{$svg-wordmark-location});
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+%no-svg-wordmark {
+    background-image: url(#{$no-svg-wordmark-location});
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+$open-house-location: "../images/OpenHouse.svg";
+$no-svg-open-house-location: "../images/OpenHouse.png";
+%svg-openhouse {
+    background-image: url(#{$open-house-location});
+    background-position:center;
+    background-size:60%;
+    background-repeat:no-repeat;
+}
+%no-svg-openhouse {
+    background-image: url(#{$no-svg-open-house-location});
+    background-position:center;
+    background-size:60%;
+    background-repeat:no-repeat;
+}

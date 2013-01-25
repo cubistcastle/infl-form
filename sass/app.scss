@@ -1,0 +1,162 @@
+// You custom settings file to override Foundation defaults
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+@import "ccc-basics";
+// ----------------------------------------
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "compass/css3";
+// @import "foundation/settings";
+// @import "foundation/functions/all";
+
+// Control which mixins you have access too
+
+// @import "foundation/mixins/clearfix";
+// @import "foundation/mixins/css-triangle";
+// @import "foundation/mixins/font-size";
+
+// Must include next two for semantic grid to work
+
+// @import "foundation/mixins/respond-to";
+// @import "foundation/mixins/semantic-grid";
+
+// @import "foundation/common/globals";
+// @import "modular-scale";
+
+// Must include the grid for any responsiveness
+
+// @import "foundation/components/grid";
+
+// Control which common styles get compiled
+
+// @import "foundation/common/typography";
+// @import "foundation/common/forms";
+
+// Control which components you get if customizing
+
+// @import "foundation/components/modules/buttons";
+// @import "foundation/components/modules/tabs";
+// @import "foundation/components/modules/ui";
+// @import "foundation/components/modules/topbar";
+// @import "foundation/components/modules/navbar";
+// @import "foundation/components/modules/orbit";
+// @import "foundation/components/modules/reveal";
+// @import "foundation/components/modules/offcanvas";
+
+body {
+	background:$new-grey;
+}
+
+fieldset {
+	border:none;
+}
+
+.wordmark {
+margin-top: 1.5em;
+}
+
+.main-content {
+	@include outerRow();
+	background:$mainColor;
+	padding: 2em;
+	border-top: 3px solid #b3b3b3;
+}
+
+.main-content-header {
+	color:white;
+}
+.request-forms {
+	@include innerRow();
+}
+
+.form-fields {
+	@include column(6);
+}
+
+label {
+	color:white;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+	border-radius: 6px;
+	padding: 1.5em 1.15em;
+	border:none;
+}
+.submit {
+	@include column(12);
+}
+.submit-button {
+	border: none;
+	background: rgb(164, 206, 228);
+	color: white;
+	padding: 1.75em 5em;
+	border-radius: 0.3333em;
+	&:hover {
+		background-color: rgba(164, 206, 228,0.75);
+	}
+	&:active {
+		background-color: rgba(164, 206, 228,0.675);
+	}
+}
+.thanks {
+	@include outerRow();
+	background:$mainColor;
+	color:white;
+	a {
+		color:rgb(24, 89, 148)
+	}
+}
+
+.thank-you-message {
+	@include column(12);
+}
+
+.header {
+	background-image: url('../images/mpc1.jpg');
+	background-size: cover;
+	background-position-y: 0px;
+	height:250px;
+	@media (min-width: 40em) {
+    background-position-y: -50px;
+    height:300px;
+  }
+}
+
+.content-section {
+	background:#eee;
+	padding:2em;
+}
+.tabs.pill {
+	float:right;
+}
+
+.footer {
+	background:white;
+	padding:3em;
+	border-top:3px solid #248fb7;
+	p {
+		font-size:0.75em;
+		color:#4d4d4d;
+	}
+
+}
+
+.footer-wordmark-svg {
+		display:block;
+		margin:2em auto;
+	}
+
+.footer-copyright {
+	margin-right:3em;
+}
+
+.footer-address {
+	margin-left:2em;
+}
+
+.address-phone {
+	text-align: center;
+}
