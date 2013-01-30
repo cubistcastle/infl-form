@@ -6093,22 +6093,30 @@ table.hide-for-medium {
   src: local("Lato Regular"), local("Lato-Regular"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format("woff");
 }
 
-/* line 49, ../sass/app.scss */
-body {
-  background: #e8e8ea;
+/* line 50, ../sass/app.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(boxsizing.htc);
 }
 
-/* line 53, ../sass/app.scss */
+/* line 57, ../sass/app.scss */
+body {
+  background: #444;
+}
+
+/* line 61, ../sass/app.scss */
 fieldset {
   border: none;
 }
 
-/* line 57, ../sass/app.scss */
+/* line 65, ../sass/app.scss */
 .wordmark {
   margin-top: 1.5em;
 }
 
-/* line 61, ../sass/app.scss */
+/* line 69, ../sass/app.scss */
 .main-content {
   width: 1000px;
   max-width: 100%;
@@ -6119,7 +6127,7 @@ fieldset {
   border-top: 3px solid #b3b3b3;
 }
 @media only screen and (max-width: 767px) {
-  /* line 61, ../sass/app.scss */
+  /* line 69, ../sass/app.scss */
   .main-content {
     width: auto;
     min-width: 0;
@@ -6128,70 +6136,71 @@ fieldset {
   }
 }
 
-/* line 68, ../sass/app.scss */
+/* line 76, ../sass/app.scss */
 .main-content-header {
   color: white;
 }
 
-/* line 71, ../sass/app.scss */
+/* line 79, ../sass/app.scss */
 .request-forms {
   margin: 0 -15px;
 }
 
-/* line 75, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 .form-fields {
   width: 50%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 75, ../sass/app.scss */
+  /* line 83, ../sass/app.scss */
   .form-fields {
     float: none;
     width: auto;
   }
 }
 
-/* line 79, ../sass/app.scss */
+/* line 87, ../sass/app.scss */
 label {
   color: white;
 }
 
-/* line 83, ../sass/app.scss */
+/* line 91, ../sass/app.scss */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   border-radius: 6px;
   padding: 1.5em 1.15em;
   border: none;
 }
 
-/* line 88, ../sass/app.scss */
+/* line 96, ../sass/app.scss */
 .submit {
   width: 100%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 88, ../sass/app.scss */
+  /* line 96, ../sass/app.scss */
   .submit {
     float: none;
     width: auto;
   }
 }
 
-/* line 91, ../sass/app.scss */
+/* line 99, ../sass/app.scss */
 .submit-button {
   border: none;
-  background: #a4cee4;
+  background: #8a125c;
   color: white;
   padding: 1.75em 5em;
   border-radius: 0.3333em;
 }
-/* line 97, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 .submit-button:hover {
-  background-color: rgba(164, 206, 228, 0.75);
+  background-color: #006086;
+  cursor: pointer;
 }
-/* line 100, ../sass/app.scss */
+/* line 109, ../sass/app.scss */
 .submit-button:active {
-  background-color: rgba(164, 206, 228, 0.675);
+  background-color: #006086;
 }
 
-/* line 104, ../sass/app.scss */
+/* line 113, ../sass/app.scss */
 .thanks {
   width: 1000px;
   max-width: 100%;
@@ -6201,7 +6210,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   color: white;
 }
 @media only screen and (max-width: 767px) {
-  /* line 104, ../sass/app.scss */
+  /* line 113, ../sass/app.scss */
   .thanks {
     width: auto;
     min-width: 0;
@@ -6209,24 +6218,35 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     margin-right: 0;
   }
 }
-/* line 108, ../sass/app.scss */
+/* line 117, ../sass/app.scss */
 .thanks a {
-  color: #185994;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  padding-right: 0.2em;
+  padding-left: 0.2em;
+  background: #fff;
+  color: #048fba;
+  border-right: solid 2px #048fba;
+  border-bottom: solid 2px #048fba;
+}
+/* line 126, ../sass/app.scss */
+.thanks a:hover {
+  background: #d8d8d8;
 }
 
-/* line 113, ../sass/app.scss */
+/* line 132, ../sass/app.scss */
 .thank-you-message {
   width: 100%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 113, ../sass/app.scss */
+  /* line 132, ../sass/app.scss */
   .thank-you-message {
     float: none;
     width: auto;
   }
 }
 
-/* line 117, ../sass/app.scss */
+/* line 136, ../sass/app.scss */
 .header {
   background-image: url("../images/mpc1.jpg");
   background-size: cover;
@@ -6234,53 +6254,89 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   height: 250px;
 }
 @media (min-width: 40em) {
-  /* line 117, ../sass/app.scss */
+  /* line 136, ../sass/app.scss */
   .header {
     background-position-y: -50px;
     height: 300px;
   }
 }
 
-/* line 128, ../sass/app.scss */
+/* line 147, ../sass/app.scss */
 .content-section {
   background: #eee;
   padding: 2em;
 }
 
-/* line 132, ../sass/app.scss */
+/* line 151, ../sass/app.scss */
 .tabs.pill {
   float: right;
 }
+@media only screen and (max-width: 767px) {
+  /* line 153, ../sass/app.scss */
+  .tabs.pill a {
+    font-size: 0.75em;
+  }
+}
 
-/* line 136, ../sass/app.scss */
+/* line 158, ../sass/app.scss */
+#join-usTab {
+  list-style-type: none;
+}
+
+/* line 162, ../sass/app.scss */
 .footer {
   background: white;
   padding: 3em;
   border-top: 3px solid #248fb7;
 }
-/* line 140, ../sass/app.scss */
+/* line 166, ../sass/app.scss */
 .footer p {
   font-size: 0.75em;
   color: #4d4d4d;
 }
 
-/* line 147, ../sass/app.scss */
+/* line 173, ../sass/app.scss */
+.orgs li {
+  list-style-type: none;
+}
+
+/* line 177, ../sass/app.scss */
+.heca-logo {
+  max-width: 65%;
+  margin: 1em auto;
+  display: block;
+}
+
+/* line 182, ../sass/app.scss */
+.ieca-logo {
+  max-width: 75%;
+  margin: 1em auto;
+  display: block;
+}
+
+/* line 187, ../sass/app.scss */
 .footer-wordmark-svg {
   display: block;
   margin: 2em auto;
 }
+@media only screen and (max-width: 767px) {
+  /* line 187, ../sass/app.scss */
+  .footer-wordmark-svg {
+    width: 100%;
+  }
+}
 
-/* line 152, ../sass/app.scss */
+/* line 197, ../sass/app.scss */
 .footer-copyright {
   margin-right: 3em;
 }
 
-/* line 156, ../sass/app.scss */
+/* line 201, ../sass/app.scss */
 .footer-address {
   margin-left: 2em;
 }
 
-/* line 160, ../sass/app.scss */
+/* line 205, ../sass/app.scss */
 .address-phone {
   text-align: center;
 }

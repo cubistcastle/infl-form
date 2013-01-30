@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html> <![endif]-->
+<!--[if !IE]><!--> <html class="no-js" lang="en">            <!--<![endif]-->
+
 <head>
     <meta charset="utf-8" />
 
@@ -35,7 +38,7 @@
 <body>
     <div class="row">
         <div class="twelve columns header">
-            <div class="wordmark">
+            <div class="wordmark row">
                 <svg class="five columns header-wordmark-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      width="288px" height="90.094px" viewBox="0 0 288 90.094" enable-background="new 0 0 288 90.094" xml:space="preserve">
                 <g>
@@ -137,7 +140,7 @@
                 <h1>About Columbia</h1>
                 <p>Columbia College Chicago is a college for creatives who plan to change the world and make a career, a living, a life, doing what they love. Columbia is a visual, performing, media arts college engaged in the important work of teaching creative students to develop authentic, creative voices, meaningful skills, and building the critical professional skills and connections that prepare them to launch sustainable careers.
                 </p>
-                <p>A Columbia education emphasizes early access and extensive exposure to the professional industries - it is paramount to student success. Columbia has developed the most extensive community of the world’s leading artists and communicators out there - faculty, alumni and employers who offer Columbia students unparalleled access and meaningful industry experience. 
+                <p>A Columbia education emphasizes early access and extensive exposure to the professional industries — it is paramount to student success. Columbia has developed the most extensive community of the world’s leading artists and communicators out there - faculty, alumni and employers who offer Columbia students unparalleled access and meaningful industry experience. 
                 </p>
             </li>
         </ul>
@@ -158,7 +161,7 @@
                     <input type="hidden" name="formkey" value="dGQydzdjT0psaDJhVlpydDhnVFZTNFE6MQ" />
                     <fieldset class="form-fields basic-info">
                     <label class="ss-q-title" for="entry_0">First Name</label>
-                    <input type="text" name="entry.0.single" value="" class="ss-q-short firstname" id="entry_0" autofocus="autofocus">
+                    <input type="text" name="entry.0.single" value="" class="ss-q-short firstname" id="entry_0">
 
                     <label class="ss-q-title" for="entry_1">Last Name</label>
                     <input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1">
@@ -169,7 +172,7 @@
                     <label class="ss-q-title" for="entry_3">Organization</label>
                     <input type="text" name="entry.3.single" value="" class="ss-q-short" id="entry_3">
                     
-                    <input name="entry.6.single" value="sourcecode" class="ss-q-short sourcecode" id="entry_6" type="hidden">
+                    <input name="entry.6.single" value="" class="ss-q-short sourcecode" id="entry_6" type="hidden">
 
                     <label class="ss-q-title" for="entry_4">Title</label>
                     <input type="text" name="entry.4.single" value="" class="ss-q-short" id="entry_4">
@@ -212,11 +215,20 @@
         <div class="thanks" style="display:none">
             <div class="thank-you-message">
             <h4 class="main-content-header">We would love to host you on campus</h4>
-            <p>Consider this an open, standing invitation to connect with our incredible community. <a href="mailto:admissions@colum.edu">Visit us, or contact us anytime</a> - our Admissions team will be thrilled to speak with you. Our hope is that as you continue getting to know us, you will see for yourself how, for more than 120 years, we have been helping gifted, creative students prepare for rewarding futures doing the things they are passionate about – living what they love.</p>
+            <p>Consider this an open, standing invitation to connect with our incredible community. <a href="mailto:admissions@colum.edu">Visit us, or contact us anytime</a> — our Admissions team will be thrilled to speak with you. Our hope is that as you continue getting to know us, you will see for yourself how, for more than 120 years, we have been helping gifted, creative students prepare for rewarding futures doing the things they are passionate about — living what they love.</p>
             </div>
         </div>
         <div class="row">
         <div class="footer twelve columns">
+            <div class="row">
+            <ul class="orgs"> 
+                <li class="three columns mobile-two "><img class="heca-logo" src="images/heca.gif" alt="Higher Education Consultants Information"></li>
+                <li class="three columns mobile-two "><img class="ieca-logo" src="images/ieca.gif" alt="Independent Educational Consultants Association"></li>
+                <li class="three columns mobile-two nacac-logo"><img src="images/nacac.gif" alt="National Assocation for College Admission Counseling"></li>
+                <li class="three columns mobile-two ptk-logo"><img src="images/ptk.gif" alt="Phi Theta Kappa"></li>
+            </ul>
+            </div>
+            
             <div class="footer-wordmark">
                 <svg class="footer-wordmark-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      width="288px" height="90.094px" viewBox="0 0 288 90.094" enable-background="new 0 0 288 90.094" xml:space="preserve">
@@ -295,95 +307,98 @@
                 </svg>
             </div>
             <div class="row">
-                <div class="twelve columns address-phone"><p>600 S. MICHIGAN AVENUE, CHICAGO, IL 60605 | Phone: 312.369.7130</p></div>
-                <div class="columns five offset-by-one"><p>600 S. MICHIGAN AVENUE, CHICAGO, IL 60605</p></div>
-                <div class="columns five"><p>Phone: 312.369.7130</p></div>
+                <div class="twelve columns address-phone hide-for-small"><p>600 S. MICHIGAN AVENUE, CHICAGO, IL 60605 | Phone: 312.369.7130</p></div>
+                <div class="columns five offset-by-one show-for-small"><p>600 S. MICHIGAN AVENUE, CHICAGO, IL 60605</p></div>
+                <div class="columns five show-for-small"><p>Phone: 312.369.7130</p></div>
             </div>
            
         </div>
         </div>
     <script>
-        $(function() {
-            $("#country").change(function(){
-                $this = $(this);
-                    if ( $this.val() ) {
-                        $('.address-info').fadeIn('fast');
-                    }
-                    if ( $this.val() !== "United States" ) {
-                        // alert('born in the usa');
-                        $('label.state-prov').text('Province');
-                        $('label.zip-postal-label').text('Postal Code');
-                        $(".phone").inputmask('unmaskedvalue');
-                    } else {
-                        $('label.state-prov').text('State');
-                        $('label.zip-postal-label').text('Zip Code');
-                        $(".phone").inputmask("mask", {"mask": "(999) 999-9999"});
-                        $(".smarty").hide();
-                    }
-                });
-            $('.zip-postal').change(function(){
-                var address =encodeURI($('.address-1').val());
-                var zip = encodeURI($('.zip-postal').val());
-                var getString = '&street=' +address + '&street2=&city=&state=' + '&zipcode=' + zip;
-                $.get('https://api.smartystreets.com/street-address?auth-id=ef60d903-01b2-4ac5-878b-5cd8a5e23c44&auth-token=yJTbHWs7keSop6HtdO%2BRzr3kSkuD2H4kJqCh1THx%2BuR7wRh9epz78OT3wnCoqjRJItmud72rgkpd9jnhXOafUA%3D%3D' +getString + '&candidates=10', function(data) {
-                  var city = data[0].components.city_name;
-                  var state = data[0].components.state_abbreviation;
-                  $(".smarty").fadeIn();
-                  $('.city').val(city).parents()
-                  $('.state').val(state); 
-              });
-             });
+    jQuery(function($){
 
-            $("form").validate({
-                rules: {
-                          "entry.0.single": "required", // firstname
-                          "entry.1.single": "required", // lastname
-                          "entry.2.single": {
-                            required: true,
-                            email: true
-                          },
-                          "entry.5.single": "required", // country
-                          "entry.8.single": "required", // address1
-                          "entry.12.single": "required", // city
-                          "entry.14.single": "required", // state/prov
-                          "entry.18.single": "required", // zip
-                          "entry.16.single": "required" // phone
-                        },
-               messages: {
-                 // name: "Please specify your name",
-                 "entry.2.single": {
-                   required: "We need your email address to contact you"
-                 }
-               },
-               onkeyup: false
-            });
-            $('.submit-button').on('click', function(e) {
-                if ($(".influencer-form").valid()) {
-
-
-                    e.preventDefault();
-                    // console.log( $("form").serialize() );
-                    var postVar = $("form").serialize();
-                     $.ajax({
-                        url: "http://spreadsheets.google.com/spreadsheet/formResponse",
-                        data: postVar,
-                        type: 'POST',
-                        dataType: "jsonp"
-                    });
-                    $('.main-content').fadeOut('fast');
-                    $('.thanks').fadeIn('slow');
+        $("#country").change(function(){
+            $this = $(this);
+                if ( $this.val() ) {
+                    $('.address-info').fadeIn('fast');
+                }
+                if ( $this.val() !== "United States" ) {
+                    // alert('born in the usa');
+                    $('label.state-prov').text('Province');
+                    $('label.zip-postal-label').text('Postal Code');
+                    $(".phone").inputmask('unmaskedvalue');
+                } else {
+                    $('label.state-prov').text('State');
+                    $('label.zip-postal-label').text('Zip Code');
+                    $(".phone").inputmask("mask", {"mask": "(999) 999-9999"});
+                    $(".smarty").hide();
+                    $(".ie .smarty").show();
                 }
             });
+        $('.zip-postal').change(function(){
+            var address =encodeURI($('.address-1').val());
+            var zip = encodeURI($('.zip-postal').val());
+            var getString = '&street=' +address + '&street2=&city=&state=' + '&zipcode=' + zip;
+            $.get('https://api.smartystreets.com/street-address?auth-id=ef60d903-01b2-4ac5-878b-5cd8a5e23c44&auth-token=yJTbHWs7keSop6HtdO%2BRzr3kSkuD2H4kJqCh1THx%2BuR7wRh9epz78OT3wnCoqjRJItmud72rgkpd9jnhXOafUA%3D%3D' +getString + '&candidates=10', function(data) {
+              var city = data[0].components.city_name;
+              var state = data[0].components.state_abbreviation;
+              console.log(city);
+              $(".smarty").fadeIn();
+              $('.city').val(city).parents()
+              $('.state').val(state); 
+          });
+         });
+
+        $("form").validate({
+            rules: {
+                      "entry.0.single": "required", // firstname
+                      "entry.1.single": "required", // lastname
+                      "entry.2.single": {
+                        required: true,
+                        email: true
+                      },
+                      "entry.5.single": "required", // country
+                      "entry.8.single": "required", // address1
+                      "entry.12.single": "required", // city
+                      "entry.14.single": "required", // state/prov
+                      "entry.18.single": "required", // zip
+                      "entry.16.single": "required" // phone
+                    },
+           messages: {
+             // name: "Please specify your name",
+             "entry.2.single": {
+               required: "We need your email address to contact you"
+             }
+           },
+           onkeyup: false
         });
+        $('.submit-button').on('click', function(e) {
+            if ($(".influencer-form").valid()) {
 
-        // https://api.smartystreets.com/street-address?auth-id=ef60d903-01b2-4ac5-878b-5cd8a5e23c44&auth-token=yJTbHWs7keSop6HtdO%2BRzr3kSkuD2H4kJqCh1THx%2BuR7wRh9epz78OT3wnCoqjRJItmud72rgkpd9jnhXOafUA%3D%3D&street=600%20S%20Michigan%20Ave&street2=&city=&state=&zipcode=60605&candidates=10
 
-        /*
-        $.get('https://api.smartystreets.com/street-address?auth-id=ef60d903-01b2-4ac5-878b-5cd8a5e23c44&auth-token=yJTbHWs7keSop6HtdO%2BRzr3kSkuD2H4kJqCh1THx%2BuR7wRh9epz78OT3wnCoqjRJItmud72rgkpd9jnhXOafUA%3D%3D&street=600%20S%20Michigan%20Ave&street2=&city=&state=&zipcode=60605&candidates=10', function(data) {
-          console.log(data[0].components.city_name);
-          //alert('Load was performed.');
-    
-        */
+                e.preventDefault();
+                // console.log( $("form").serialize() );
+                var postVar = $("form").serialize();
+                 $.ajax({
+                    url: "http://spreadsheets.google.com/spreadsheet/formResponse",
+                    data: postVar,
+                    type: 'POST',
+                    dataType: "jsonp"
+                });
+                $('.main-content').fadeOut('fast');
+                $('.thanks').fadeIn('slow');
+            }
+        });
+        var select = document.getElementById("country");
+        for(var i = 0; i < countries.length; i++) {
+            var opt = countries[i];
+            var el = document.createElement("option");
+            el.textContent = opt;
+            el.value = opt;
+            select.appendChild(el);
+        }
+    });
+
 
         var countries = ["Afghanistan", "Aland Islands", "Albania", "Algeria", "American Samoa", "Andorra", "Angola",
                 "Anguilla", "Antarctica", "Antigua And Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria",
@@ -423,14 +438,7 @@
                 "Turks and Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "Uruguay", "Uzbekistan", "Vanuatu",
                         "Venezuela, Bolivarian Republic of", "Viet Nam", "Virgin Islands, British", "Virgin Islands, U.S.",
                         "Wallis and Futuna", "Western Sahara", "Yemen", "Zambia", "Zimbabwe"];
-        var select = document.getElementById("country");
-        for(var i = 0; i < countries.length; i++) {
-            var opt = countries[i];
-            var el = document.createElement("option");
-            el.textContent = opt;
-            el.value = opt;
-            select.appendChild(el);
-        }
+        
     </script>
      <!-- Included JS Files (Uncompressed) -->
 

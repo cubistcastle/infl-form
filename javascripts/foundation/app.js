@@ -49,7 +49,7 @@ if ( !Modernizr.touch) {
     });
   }*/
 
-        $("form").validate({
+/*        $("form").validate({
             rules: {
              // name: "required",
              "entry.2.single": {
@@ -64,8 +64,8 @@ if ( !Modernizr.touch) {
                email: "That's no email!"
              }
            }
-        });
-     /*$(".influencer-form").validate({
+        });*/
+     $(".influencer-form").validate({
          rules: {
           "entry.0.single": "required", // firstname
           "entry.1.single": "required", // lastname
@@ -106,7 +106,7 @@ if ( !Modernizr.touch) {
           // $('form').hide();
           // $('.thanks').show().addClass('animated bounceInLeft');
       }
-  });*/
+  });
 
 
 })(jQuery, this);
