@@ -58,8 +58,9 @@ body {
 	background:#444;
 }
 
-fieldset {
-	border:none;
+.ss-choice-item {
+    border-top: solid 2px darken($CCC-blue, 10%);
+    padding: 1em 0;
 }
 
 .wordmark {
@@ -84,14 +85,20 @@ margin-top: 1.5em;
 	@include column(6);
 }
 
-label {
-	color:white;
+.check-label {
+	color: #222;
+	background: #f4f4f4;
+	padding: .3em;
 }
 
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
 	border-radius: 6px;
 	padding: 1.5em 1.15em;
 	border:none;
+	background: #d8d8d8;
+	&:focus {
+    	background: #f4f4f4;
+	}
 }
 .submit {
 	@include column(12);
@@ -113,7 +120,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 .thanks {
 	@include outerRow();
 	background:$mainColor;
-	color:white;
+	color: #222;
 	a {
 		padding-top:0.1em;
 		padding-bottom:0.1em;
@@ -148,60 +155,5 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 	background:#eee;
 	padding:2em;
 }
-.tabs.pill {
-	float:right;
-	a {
-		@media only screen and (max-width: 767px) { font-size:0.75em; }
-	}
-}
 
-#join-usTab {
-	list-style-type: none;
-}
-
-.footer {
-	background:white;
-	padding:3em;
-	border-top:3px solid #248fb7;
-	p {
-		font-size:0.75em;
-		color:#4d4d4d;
-	}
-
-}
-
-.orgs li{
-	list-style-type: none;
-}
-
-.heca-logo {
-	max-width: 65%;
-	margin: 1em auto;
-	display: block;
-}
-.ieca-logo {
-	max-width:75%;
-	margin: 1em auto;
-	display: block;
-}
-.footer-wordmark-svg {
-		display:block;
-		margin:2em auto;
-		@media only screen and (max-width: 767px) { width:100%; }
-	}
-
-
-
-
-
-.footer-copyright {
-	margin-right:3em;
-}
-
-.footer-address {
-	margin-left:2em;
-}
-
-.address-phone {
-	text-align: center;
-}
+h4 { color: $CCC-blue; }
